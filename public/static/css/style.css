@@ -40,6 +40,9 @@ h5 {
   font-weight: 600;
 }
 
+.clear {
+  clear: both;
+}
 .nav > li > a {
   color: #a7b1c2;
   font-weight: 500;
