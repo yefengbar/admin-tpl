@@ -4,18 +4,14 @@
       <ul class="nav" id="side-menu">
         <li class="nav-header">
           <div class="dropdown profile-element">
-                        	<span>
-                            <img alt="image" class=""
-                                 src="http://n.7k7kimg.cn/uploads/cdn/web7k/img/logo.png?v=2016119105120"/>
-                             </span>
-
+            <span><img alt="image" class="" src="/static/img/logo.png"/></span>
           </div>
           <div class="logo-element">
             7k7k
           </div>
         </li>
         <li class="nav_class"><a href="javascript:;"><span class="nav-label"><i
-          class="fa fa-th-large"></i>基础功能</span><span class="label label-info pull-right">17</span></a></li>
+          class="fa fa-th-large"></i>基础功能</span><span class="badge pull-right">17</span></a></li>
         {{#each model as |list|}}
           <li class="{{list.active}}">
             {{#if list.url}}
@@ -33,12 +29,12 @@
             {{/if}}
             {{#if list.list}}
               <ul class="nav nav-second-level">
-              {{#each list.list as |li|}}
-                <li>
-                  <a href="">{{li.name}}</a>
-                </li>
-              {{/each}}
-            </ul>
+                {{#each list.list as |li|}}
+                  <li>
+                    {{#link-to li.url}}{{li.name}}{{/link-to}}
+                  </li>
+                {{/each}}
+              </ul>
             {{/if}}
           </li>
         {{/each}}

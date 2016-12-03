@@ -6,11 +6,8 @@ export default Ember.Route.extend({
       "name": "更新管理",
       "url": "",
       "icon": "fa-repeat",
-      "list": [{"name": "游戏管理", "url": "index", "icon": "fa-gamepad"}, {
-        "name": "游戏管理",
-        "url": "index",
-        "icon": "fa-gamepad"
-      }]
+      "list": [{"name": "系统缓存", "url": "news"},
+        {"name": "后台缓存", "url": "about"}]
     },
       {"name": "游戏管理", "url": "index", "icon": "fa-gamepad"},
       {"name": "平台管理·旧", "url": "index", "icon": "fa-tachometer"},
