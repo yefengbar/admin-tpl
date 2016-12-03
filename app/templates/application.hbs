@@ -18,18 +18,28 @@
           class="fa fa-th-large"></i>基础功能</span><span class="label label-info pull-right">17</span></a></li>
         {{#each model as |list|}}
           <li class="{{list.active}}">
-            {{#link-to list.url}}
-              <i class="fa {{list.icon}}"></i>
-              <span class="nav-label">{{list.name}}</span>
-              <span class="fa fa-angle-right" style="float: right;"></span>
-            {{/link-to}}
-            <ul class="nav nav-second-level hidden">
+            {{#if list.url}}
+              {{#link-to list.url}}
+                <i class="fa {{list.icon}}"></i>
+                <span class="nav-label">{{list.name}}</span>
+                <span class="fa arrow"></span>
+              {{/link-to}}
+            {{else}}
+              <a href="javascript:;">
+                <i class="fa {{list.icon}}"></i>
+                <span class="nav-label">{{list.name}}</span>
+                <span class="fa arrow"></span>
+              </a>
+            {{/if}}
+            {{#if list.list}}
+              <ul class="nav nav-second-level">
               {{#each list.list as |li|}}
                 <li>
                   <a href="">{{li.name}}</a>
                 </li>
               {{/each}}
             </ul>
+            {{/if}}
           </li>
         {{/each}}
       </ul>

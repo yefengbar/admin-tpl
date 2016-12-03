@@ -4,7 +4,7 @@ export default Ember.Route.extend({
   model: function () {
     return [{
       "name": "更新管理",
-      "url": "index",
+      "url": "",
       "icon": "fa-repeat",
       "list": [{"name": "游戏管理", "url": "index", "icon": "fa-gamepad"}, {
         "name": "游戏管理",
@@ -31,8 +31,11 @@ export default Ember.Route.extend({
   },
   actions: {
     showUi: function (str) {
-      this.transitionTo(str);
+      //this.transitionTo(str);
+      console.log()
+      //$('#side-menu li').addClass('')
     }
   }
 });
-
+$('body').append('<script src="static/js/bootstrap.min.js?v=3.4.0"></script>');
+$('body').append('<script src="static/js/hplus.js?v=2.2.0"></script>')
