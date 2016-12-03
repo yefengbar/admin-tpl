@@ -1,0 +1,380 @@
+<div class="row  border-bottom white-bg dashboard-header">
+  <div class="col-sm-3">
+    <h2>您好,韩超群</h2>
+    <small>您有32条消息和6个待处理事项</small>
+    <ul class="list-group clear-list m-t">
+      {{#each model as |list|}}
+        <li class="list-group-item">
+          <span class="pull-right">{{list.time}}</span>
+          <span class="label label-info">{{list.id}}</span> {{list.title}}
+        </li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="col-sm-6">
+    <div class="flot-chart dashboard-chart">
+      <div class="flot-chart-content" id="flot-dashboard-chart"></div>
+    </div>
+    <div class="row text-left">
+      <div class="col-xs-4">
+        <div class=" m-l-md">
+          <span class="h4 font-bold m-t block">&yen; 406,100</span>
+          <small class="text-muted m-b block">销售营销报告</small>
+        </div>
+      </div>
+      <div class="col-xs-4">
+        <span class="h4 font-bold m-t block">&yen; 150,401</span>
+        <small class="text-muted m-b block">年销售收入</small>
+      </div>
+      <div class="col-xs-4">
+        <span class="h4 font-bold m-t block">&yen; 16,822</span>
+        <small class="text-muted m-b block">半年收入利润率</small>
+      </div>
+
+    </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="statistic-box">
+      <h4>
+        项目的进度
+      </h4>
+      <p>
+        您还有两项未完成的任务
+      </p>
+      <div class="row text-center">
+        <div class="col-lg-6">
+          <div class="chart easypiechart inline" data-percent="73"><span class="easypie-text">61%</span>
+          </div>
+          <h5>OA测</h5>
+        </div>
+        <div class="col-lg-6">
+          <div class="chart2 easypiechart inline" data-percent="33"><span class="easypie-text">31%</span>
+          </div>
+          <h5>CRM</h5>
+        </div>
+      </div>
+      <div class="m-t">
+        <small>请尽快完成相关项目的开发、测试工作</small>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="wrapper wrapper-content">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="col-lg-4 ui-sortable">
+        <div class="ibox float-e-margins">
+          <div class="ibox-title">
+            <h5>数据报告</h5>
+          </div>
+          <div class="ibox-content">
+            <div class="pull-right text-right">
+              季度销售额<br>
+              <small>(单位：元)</small>
+            </div>
+            <h4>¥ 20 054.43<br>
+              <small class="m-r"><a href="graph_flot.html"> 查看所有数据</a></small>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 ui-sortable">
+        <div class="ibox float-e-margins">
+          <div class="ibox-title">
+            <h5>充值报告</h5>
+          </div>
+          <div class="ibox-content">
+            <div class="pull-right text-right">
+              季度充值额<br>
+              <small>(单位：元)</small>
+            </div>
+            <h4>¥ 20 054.43<br>
+              <small class="m-r"><a href="graph_flot.html"> 查看所有数据</a></small>
+            </h4>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 ui-sortable">
+        <div class="ibox float-e-margins">
+          <div class="ibox-title">
+            <h5>访客报告</h5>
+          </div>
+          <div class="ibox-content">
+            <div class="pull-right text-right">
+              总访客<br>
+              <small>(单位：次)</small>
+            </div>
+            <h4>20 05443<br>
+              <small class="m-r"><a href="graph_flot.html"> 查看所有数据</a></small>
+            </h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="col-lg-6">
+        <div class="ibox float-e-margins">
+          <div class="ibox-title">
+            <h5>饼状图</h5>
+            <div class="ibox-tools">
+              <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+              </a>
+              <a class="dropdown-toggle" data-toggle="dropdown" href="graph_flot.html#">
+                <i class="fa fa-wrench"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-user">
+                <li><a href="graph_flot.html#">选项1</a>
+                </li>
+                <li><a href="graph_flot.html#">选项2</a>
+                </li>
+              </ul>
+              <a class="close-link">
+                <i class="fa fa-times"></i>
+              </a>
+            </div>
+          </div>
+          <div class="ibox-content">
+            <div class="echarts" id="echarts-pie-chart" _echarts_instance_="1480668726392"
+                 style="background-color: rgba(0, 0, 0, 0); cursor: default;">
+              <div style="position: relative; overflow: hidden; width: 522px; height: 240px;">
+                <div width="522" height="240" data-zr-dom-id="bg"
+                     style="position: absolute; left: 0px; top: 0px; width: 522px; height: 240px; user-select: none;"></div>
+                <canvas width="522" height="240" data-zr-dom-id="1"
+                        style="position: absolute; left: 0px; top: 0px; width: 522px; height: 240px; user-select: none;"></canvas>
+                <canvas width="522" height="240" data-zr-dom-id="2"
+                        style="position: absolute; left: 0px; top: 0px; width: 522px; height: 240px; user-select: none;"></canvas>
+                <canvas width="522" height="240" data-zr-dom-id="3"
+                        style="position: absolute; left: 0px; top: 0px; width: 522px; height: 240px; user-select: none;"></canvas>
+                <canvas width="522" height="240" data-zr-dom-id="4"
+                        style="position: absolute; left: 0px; top: 0px; width: 522px; height: 240px; user-select: none;"></canvas>
+                <canvas width="522" height="240" data-zr-dom-id="6"
+                        style="position: absolute; left: 0px; top: 0px; width: 522px; height: 240px; user-select: none;"></canvas>
+                <canvas width="522" height="240" data-zr-dom-id="8"
+                        style="position: absolute; left: 0px; top: 0px; width: 522px; height: 240px; user-select: none;"></canvas>
+                <canvas width="522" height="240" data-zr-dom-id="_zrender_hover_"
+                        style="position: absolute; left: 0px; top: 0px; width: 522px; height: 240px; user-select: none;"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div class="ibox float-e-margins">
+          <div class="ibox-title">
+            <h5>雷达图</h5>
+            <div class="ibox-tools">
+              <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+              </a>
+              <a class="dropdown-toggle" data-toggle="dropdown" href="graph_flot.html#">
+                <i class="fa fa-wrench"></i>
+              </a>
+              <ul class="dropdown-menu dropdown-user">
+                <li><a href="graph_flot.html#">选项1</a>
+                </li>
+                <li><a href="graph_flot.html#">选项2</a>
+                </li>
+              </ul>
+              <a class="close-link">
+                <i class="fa fa-times"></i>
+              </a>
+            </div>
+          </div>
+          <div class="ibox-content">
+            <div class="echarts" id="echarts-radar-chart" _echarts_instance_="1480668726393"
+                 style="background-color: rgba(0, 0, 0, 0);">
+              <div style="position: relative; overflow: hidden; width: 522px; height: 240px;">
+                <div width="522" height="240" data-zr-dom-id="bg"
+                     style="position: absolute; left: 0px; top: 0px; width: 522px; height: 240px; user-select: none;"></div>
+                <canvas width="522" height="240" data-zr-dom-id="0"
+                        style="position: absolute; left: 0px; top: 0px; width: 522px; height: 240px; user-select: none;"></canvas>
+                <canvas width="522" height="240" data-zr-dom-id="1"
+                        style="position: absolute; left: 0px; top: 0px; width: 522px; height: 240px; user-select: none;"></canvas>
+                <canvas width="522" height="240" data-zr-dom-id="2"
+                        style="position: absolute; left: 0px; top: 0px; width: 522px; height: 240px; user-select: none;"></canvas>
+                <canvas width="522" height="240" data-zr-dom-id="3"
+                        style="position: absolute; left: 0px; top: 0px; width: 522px; height: 240px; user-select: none;"></canvas>
+                <canvas width="522" height="240" data-zr-dom-id="4"
+                        style="position: absolute; left: 0px; top: 0px; width: 522px; height: 240px; user-select: none;"></canvas>
+                <canvas width="522" height="240" data-zr-dom-id="6"
+                        style="position: absolute; left: 0px; top: 0px; width: 522px; height: 240px; user-select: none;"></canvas>
+                <canvas width="522" height="240" data-zr-dom-id="8"
+                        style="position: absolute; left: 0px; top: 0px; width: 522px; height: 240px; user-select: none;"></canvas>
+                <canvas width="522" height="240" data-zr-dom-id="_zrender_hover_"
+                        style="position: absolute; left: 0px; top: 0px; width: 522px; height: 240px; user-select: none;"></canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="col-lg-4">
+        <div class="ibox float-e-margins">
+          <div class="ibox-title">
+            <h5>用户项目列表</h5>
+            <div class="ibox-tools">
+              <a class="collapse-link">
+                <i class="fa fa-chevron-up"></i>
+              </a>
+              <a class="close-link">
+                <i class="fa fa-times"></i>
+              </a>
+            </div>
+          </div>
+          <div class="ibox-content">
+            <table class="table table-hover no-margins">
+              <thead>
+              <tr>
+                <th>状态</th>
+                <th>日期</th>
+                <th>用户</th>
+                <th>值</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td>
+                  <small>进行中...</small>
+                </td>
+                <td><i class="fa fa-clock-o"></i> 11:20</td>
+                <td>青衣5858</td>
+                <td class="text-navy"><i class="fa fa-level-up"></i> 24%</td>
+              </tr>
+              <tr>
+                <td><span class="label label-warning">已取消</span>
+                </td>
+                <td><i class="fa fa-clock-o"></i> 10:40</td>
+                <td>徐子崴</td>
+                <td class="text-navy"><i class="fa fa-level-up"></i> 66%</td>
+              </tr>
+              <tr>
+                <td>
+                  <small>进行中...</small>
+                </td>
+                <td><i class="fa fa-clock-o"></i> 01:30</td>
+                <td>姜岚昕</td>
+                <td class="text-navy"><i class="fa fa-level-up"></i> 54%</td>
+              </tr>
+              <tr>
+                <td>
+                  <small>进行中...</small>
+                </td>
+                <td><i class="fa fa-clock-o"></i> 02:20</td>
+                <td>武汉大兵哥</td>
+                <td class="text-navy"><i class="fa fa-level-up"></i> 12%</td>
+              </tr>
+              <tr>
+                <td>
+                  <small>进行中...</small>
+                </td>
+                <td><i class="fa fa-clock-o"></i> 09:40</td>
+                <td>荆莹儿</td>
+                <td class="text-navy"><i class="fa fa-level-up"></i> 22%</td>
+              </tr>
+              <tr>
+                <td><span class="label label-primary">已完成</span>
+                </td>
+                <td><i class="fa fa-clock-o"></i> 04:10</td>
+                <td>栾某某</td>
+                <td class="text-navy"><i class="fa fa-level-up"></i> 66%</td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-8 ui-sorttable">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ibox float-e-margins">
+              <div class="ibox-title">
+                <h5>交易地区</h5>
+                <div class="ibox-tools">
+                  <a class="collapse-link">
+                    <i class="fa fa-chevron-up"></i>
+                  </a>
+                  <a class="close-link">
+                    <i class="fa fa-times"></i>
+                  </a>
+                </div>
+              </div>
+              <div class="ibox-content">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <table class="table table-hover margin bottom" style="margin:0">
+                      <thead>
+                      <tr>
+                        <th style="width: 13%" class="text-center">序号</th>
+                        <th>交易</th>
+                        <th class="text-center">日期</th>
+                        <th class="text-center">销售额</th>
+                      </tr>
+                      </thead>
+                      <tbody>
+                      <tr>
+                        <td class="text-center">1</td>
+                        <td>防盗门
+
+                        </td>
+                        <td class="text-center small">2014.9.15</td>
+                        <td class="text-center"><span class="label label-primary">¥483.00</span>
+                        </td>
+
+                      </tr>
+                      <tr>
+                        <td class="text-center">2</td>
+                        <td>衣柜
+                        </td>
+                        <td class="text-center small">2014.9.15</td>
+                        <td class="text-center"><span class="label label-primary">¥327.00</span>
+                        </td>
+
+                      </tr>
+                      <tr>
+                        <td class="text-center">3</td>
+                        <td>防盗门
+                        </td>
+                        <td class="text-center small">2014.9.15</td>
+                        <td class="text-center"><span class="label label-warning">¥125.00</span>
+                        </td>
+
+                      </tr>
+                      <tr>
+                        <td class="text-center">4</td>
+                        <td>橱柜</td>
+                        <td class="text-center small">2014.9.15</td>
+                        <td class="text-center"><span class="label label-primary">¥344.00</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">5</td>
+                        <td>手机</td>
+                        <td class="text-center small">2014.9.15</td>
+                        <td class="text-center"><span class="label label-primary">¥235.00</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">6</td>
+                        <td>显示器</td>
+                        <td class="text-center small">2014.9.15</td>
+                        <td class="text-center"><span class="label label-primary">¥100.00</span>
+                        </td>
+                      </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
