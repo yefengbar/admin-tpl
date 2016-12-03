@@ -1,0 +1,2 @@
+# admin-tpl
+admin managesysterm
