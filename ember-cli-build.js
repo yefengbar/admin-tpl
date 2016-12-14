@@ -5,7 +5,10 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
+
   });
+  app.import('bower_components/layer/build/layer.js', {using: [{transformation: 'amd', as: "layer"}]});
+  app.import('bower_components/layer/build/skin/default/layer.css');
 
   // Use `app.import` to add additional libraries to the generated
   // output files.

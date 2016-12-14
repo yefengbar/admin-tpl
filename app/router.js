@@ -12,7 +12,8 @@ Router.map(function() {
   this.route('news');
   this.route('new', {path: 'news/:new_id'});
   this.route('add_server');
-  this.route('addServer');
+  // this.route('addServer');
+  // this.route('add_server_loading');
 });
 
 export default Router;

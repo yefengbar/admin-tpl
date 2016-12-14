@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import RSVP from 'rsvp';
+import layer from 'layer';
 export default Ember.Route.extend({
   model: function () {
     return RSVP.hash({
@@ -12,7 +13,7 @@ export default Ember.Route.extend({
       },
         {
           "name": "游戏管理", "url": "", "icon": "fa-gamepad",
-          "list": [{"name": "添加区服", "url": "addServer"},
+          "list": [{"name": "添加区服", "url": "add_server"},
             {"name": "添加游戏", "url": "index"},
             {"name": "游戏管理", "url": "index"}]
         },
@@ -106,10 +107,24 @@ export default Ember.Route.extend({
   actions: {
     showUi: function (type) {
       //this.transitionTo(str);
-      $('#side-menu .nav_' + type).toggleClass('hidden');
+      Ember.$('#side-menu .nav_' + type).toggleClass('hidden');
+    },
+    loading(transition, originRoute) {
+      //displayLoadingSpinner();
+      layer.msg('loaded......')
+      // substate implementation when returning `true`
+      return true;
     }
+  },
+  afterModel() {
+    Ember.$('body').append('<script src="static/js/hplus.js?v=2.2.0"></script>');
+    setTimeout(function () {
+      Ember.$.gritter.add({
+        title: '您有8条未读信息',
+        text: '请前往<a href="mailbox.html" class="text-warning">收件箱</a>查看今日任务',
+        time: 10000
+      });
+    }, 10);
+
   }
 });
-
-$('body').append('<script src="static/js/bootstrap.min.js?v=3.4.0"></script>');
-$('body').append('<script src="static/js/hplus.js?v=2.2.0"></script>')
