@@ -71,6 +71,14 @@ export default Ember.Route.extend({
         });
 
       }, 100);
-    })(jQuery);
+    })(Ember.$);
+  },
+  actions: {
+    willTransition: function () {
+      layer.msg('willDestroy...')
+    }
+  },
+  activate: function () {
+    layer.msg('im activate...')
   }
 });

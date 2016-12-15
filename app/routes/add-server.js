@@ -1,5 +1,6 @@
 import Ember from 'ember';
 import layer from 'layer';
+
 export default Ember.Route.extend({
   model: function () {
     var qwe = 0;
@@ -10,8 +11,12 @@ export default Ember.Route.extend({
   },
   actions: {
     loading(transition, originRoute) {
-      displayLoadingSpinner();
+      //displayLoadingSpinner();
+      layer.msg('将要进入add-server路由...');
       return true;
     }
+  },
+  activate: function () {
+    layer.msg('im add-server,s activate...')
   }
 });
