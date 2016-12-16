@@ -5,12 +5,11 @@ export default Ember.Route.extend({
     return [{"id": 1, "title": "重构特战英雄的登录", "time": "12-20"}, {"id": 2, "title": "改版联运后台", "time": "02-05"}, {
       "id": 3,
       "title": "修改联运通用登陆模版",
-      "time": "12-4"
+      "time": "12-04"
     }, {"id": 4, "title": "修改联运通用活动模版", "time": "11-20"}, {"id": 5, "title": "修改市场外投通用模版", "time": "11-28"}];
   },
   afterModel(model, transition) {
-    ;
-    (function ($) {
+    ;(function ($) {
       // WinMove();
       setTimeout(function () {
         $('.chart').easyPieChart({
@@ -72,13 +71,5 @@ export default Ember.Route.extend({
 
       }, 100);
     })(Ember.$);
-  },
-  actions: {
-    willTransition: function () {
-      layer.msg('willDestroy...')
-    }
-  },
-  activate: function () {
-    layer.msg('im activate...')
   }
 });

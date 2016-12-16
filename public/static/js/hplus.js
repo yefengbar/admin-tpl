@@ -37,6 +37,7 @@ $(document).ready(function () {
   // $.get("skin-config.html", function (data) {
   //   $('body').append(data);
   // });
+  
   setTimeout(function () {
 
 
@@ -46,11 +47,7 @@ $(document).ready(function () {
       SmoothlyMenu();
     })
   }, 50)
-  // tooltips
-  $('.tooltip-demo').tooltip({
-    selector: "[data-toggle=tooltip]",
-    container: "body"
-  })
+ 
 
   // Move modal to body
   // Fix Bootstrap backdrop issu with animation.css
@@ -63,29 +60,28 @@ $(document).ready(function () {
   }
 
   fix_height();
-
   // Fixed Sidebar
-  // unComment this only whe you have a fixed-sidebar
-  //    $(window).bind("load", function() {
-  //        if($("body").hasClass('fixed-sidebar')) {
-  //            $('.sidebar-collapse').slimScroll({
-  //                height: '100%',
-  //                railOpacity: 0.9,
-  //            });
-  //        }
-  //    })
-
   $(window).bind("load resize click scroll", function () {
     if (!$("body").hasClass('body-small')) {
       fix_height();
+      //setScroll();
     }
-  })
+  });
 
-  $("[data-toggle=popover]")
-    .popover();
+//$("[data-toggle=popover]").popover();
 });
 
-
+function setScroll(){
+		$("#wrapper .sidebar-collapse").slimScroll({
+		height: $("body").height(),
+		alwaysVisible: false,
+		});
+		$("body").slimScroll({
+		height: $("body").height(),
+		alwaysVisible: false,
+		});
+		}
+		
 // For demo purpose - animation css script
 function animationHover(element, animation) {
   element = $(element);

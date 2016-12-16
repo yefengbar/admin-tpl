@@ -108,23 +108,9 @@ export default Ember.Route.extend({
     showUi: function (type) {
       //this.transitionTo(str);
       Ember.$('#side-menu .nav_' + type).toggleClass('hidden');
-    },
-    loading(transition, originRoute) {
-      //displayLoadingSpinner();
-      layer.msg('loaded......')
-      // substate implementation when returning `true`
-      return true;
     }
   },
   afterModel() {
     Ember.$('body').append('<script src="static/js/hplus.js?v=2.2.0"></script>');
-    setTimeout(function () {
-      Ember.$.gritter.add({
-        title: '您有8条未读信息',
-        text: '请前往<a href="mailbox.html" class="text-warning">收件箱</a>查看今日任务',
-        time: 10000
-      });
-    }, 10);
-
   }
 });
