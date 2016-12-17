@@ -7749,3 +7749,8 @@ body.skin-3 {
 .echarts {
   height: 240px;
 }
+.bootstrap-select.btn-group .dropdown-menu li {
+    width: 25%;
+    float: left;
+}
+.bootstrap-select.btn-group .dropdown-menu li small {display:none}

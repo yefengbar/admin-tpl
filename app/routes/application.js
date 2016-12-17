@@ -13,7 +13,7 @@ export default Ember.Route.extend({
       },
         {
           "name": "游戏管理", "url": "", "icon": "fa-gamepad",
-          "list": [{"name": "添加区服", "url": "add_server"},
+          "list": [{"name": "添加区服", "url": "add-server"},
             {"name": "添加游戏", "url": "index"},
             {"name": "游戏管理", "url": "index"}]
         },

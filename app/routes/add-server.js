@@ -2,11 +2,15 @@ import Ember from 'ember';
 import layer from 'layer';
 
 export default Ember.Route.extend({
-  model: function () {
-//  var qwe = 0;
-//  for (var i = 0; i < 999000000; i++) {
-//    qwe = i * i;
-//  }
-    return 'qwe';
-  }
+	
+	model: function() {
+		return 'qwe';
+	},
+	
+	actions: {
+		getGids:function(params){
+//			let gids = this.get('value');
+//			console.log('this is route:'+gids+params)
+		}
+	}
 });
