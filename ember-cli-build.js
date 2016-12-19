@@ -8,6 +8,7 @@ module.exports = function(defaults) {
   });
   app.import('bower_components/layer/build/layer.js', {using: [{transformation: 'amd', as: "layer"}]});
   app.import('bower_components/layer/build/skin/default/layer.css');
+  // app.import('vendor/allgames.js');
   // Use `app.import` to add additional libraries to the generated
   // output files.
   //

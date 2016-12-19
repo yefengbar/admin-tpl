@@ -1,6 +1,7 @@
 <!--{{yield}}-->
-<select class="form-control selectpicker" data-style="btn-primary" data-live-search="true" onchange={{action 'getGid' value='target.value'}}>
-{{#each gamelist as |li|}}
-	<option value="{{li.gid}}" data-tokens="{{li.key}}" data-subtext="{{li.key}} {{li.gid}}">{{li.gname}}</option>
+<select class="form-control selectpicker agames" data-style="btn-info" data-live-search="true"
+        onchange={{action 'getGid' value='target.value'}}>
+  {{#each gamelist as |op|}}
+    <option value="{{op.gid}}" data-tokens="{{op.key}}" data-subtext="{{op.key}} {{op.gid}}">{{op.gname}}</option>
 {{/each}}
 </select>

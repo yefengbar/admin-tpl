@@ -7754,3 +7754,7 @@ body.skin-3 {
     float: left;
 }
 .bootstrap-select.btn-group .dropdown-menu li small {display:none}
+
+.agames .dropdown-menu {
+  width: 500px !important;
+}
