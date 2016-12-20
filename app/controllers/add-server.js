@@ -11,8 +11,14 @@ export default Ember.Controller.extend({
   actions: {
     send: function (params) {
       if(!this.sername){
-        layer.msg('区服名称不能为空！')
+        layer.msg('区服名称不能为空！');
+        return false;
       };
+      if(!this.sername){
+        layer.msg('区服名称不能为空！');
+        return false;
+      };
+
       console.log('------------------------------------------');
       console.log('submit.gid:' + this.get('gid'));
       console.log('submit.sername:' + this.sername);
@@ -22,6 +28,15 @@ export default Ember.Controller.extend({
       console.log('submit.serdata:' + this.serdata);
       console.log('submit.tips:' + this.tips);
       console.log('------------------------------------------');
+      layer.msg('正在处理...', {icon: 16,shade:0.3});
+      Ember.$.post('/addServer',{gid:this.gid, sername: '"'+this.sername+'"', linetype:this.linetype, sertype:this.sertype, displaytype:this.displaytype, serdata:'"'+this.serdata+'"',tips:'"'+this.tips+'"'},doto);
+      function doto(res,textStatus,jqXHR) {
+        if(res.status == 1){
+          layer.alert('添加成功！')
+        }else{
+          layer.alert('添加失败！')
+        }
+      }
       return false;
     },
     postGid:function (params) {

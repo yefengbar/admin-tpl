@@ -1,14 +1,14 @@
 {
   "name": "web",
-  "version": "0.1.3",
-  "description": "Small description for web goes here",
+  "version": "0.1.5",
+  "description": "联运后台管理系统",
   "license": "MIT",
   "author": "yefengbar.com",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/yefengbar/admin-tpl.git",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
