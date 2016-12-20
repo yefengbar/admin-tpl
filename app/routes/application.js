@@ -7,7 +7,7 @@ import { later } from 'ember-runloop'
 
 export default Ember.Route.extend({
 	ajax: inject(),
-	
+
   model: function () {
 //	return new RSVP.Promise((resolve, reject) => later(() => reject({
 //    status: 404,
@@ -25,7 +25,7 @@ export default Ember.Route.extend({
           "name": "游戏管理", "url": "", "icon": "fa-gamepad",
           "list": [{"name": "添加区服", "url": "add-server"},
             {"name": "添加游戏", "url": "index"},
-            {"name": "游戏管理", "url": "index"}]
+            {"name": "游戏管理", "url": "game-manager"}]
         },
         {
           "name": "平台管理·旧", "url": "", "icon": "fa-tachometer",
