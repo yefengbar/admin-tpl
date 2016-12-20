@@ -1,6 +1,6 @@
 <!--{{yield}}-->
 <select class="form-control selectpicker agames" data-style="btn-info" data-live-search="true"
-        onchange={{action 'getGid' value='target.value'}}>
+        onchange={{action 'getGid' value='target.value'}} >
   {{#each gamelist as |op|}}
     <option value="{{op.gid}}" data-tokens="{{op.key}}" data-subtext="{{op.key}} {{op.gid}}">{{op.gname}}</option>
 {{/each}}

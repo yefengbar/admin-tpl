@@ -5,18 +5,15 @@ export default Ember.Component.extend({
     this.set('gamelist', window.allgames);
 	},
   didRender: function () {
-    Ember.$('.selectpicker').selectpicker({
-      //style: 'btn-info',
-      //size: 'auto',
-      //width:'auto',
-    });
+    Ember.$('.selectpicker').selectpicker();
   },
 	gid:0,
 	actions:{
 		getGid:function(params){
-			console.log('this.gid is:'+params);
+			console.log('Component.gid:'+params);
 			this.set('gid',params);
-
+      this.sendAction('postGids',params);
+			return true;
     }
 	}
 });
