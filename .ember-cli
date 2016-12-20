@@ -4,6 +4,10 @@
     anonymous, but there are times when you might want to disable this behavior.
 
     Setting `disableAnalytics` to true will prevent any data from being sent.
+    usePods:ember files mod one model one files
+    if usePods set true you will add 'podModulePrefix:appName/modules' in the environment.js
   */
-  "disableAnalytics": false
+  "disableAnalytics": true,
+  "port":4200,
+  "usePods":false
 }
