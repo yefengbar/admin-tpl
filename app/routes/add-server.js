@@ -6,9 +6,7 @@ import {later} from 'ember-runloop';
 export default Ember.Route.extend({
   // ajax: inject(),
 	model: function() {
-    // return new RSVP.Promise((resolve, reject) => later(() => reject({
-    //
-    // }), 2000));
+    return new RSVP.Promise((resolve) => later(() => resolve(), 2000));
     return {gid:"",sername:"1",linetype:1,sertype:0,displaytype:0,serdata:"",tips:""};
 	},
 	actions: {
