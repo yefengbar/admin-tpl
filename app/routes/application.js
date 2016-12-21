@@ -1,18 +1,14 @@
 import Ember from 'ember';
 import RSVP from 'rsvp';
-import layer from 'layer';
+// import layer from 'layer';
 
-import inject from 'ember-service/inject'
-import { later } from 'ember-runloop'
+import inject from 'ember-service/inject';
+import { later } from 'ember-runloop';
 
 export default Ember.Route.extend({
 	ajax: inject(),
 
   model: function () {
-//	return new RSVP.Promise((resolve, reject) => later(() => reject({
-//    status: 404,
-//    message: 'Can not found resource'
-//}), 5000));
     return RSVP.hash({
       base: [{
         "name": "更新管理",

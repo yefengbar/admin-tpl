@@ -7,9 +7,8 @@ export default Ember.Route.extend({
   // ajax: inject(),
 	model: function() {
     // return new RSVP.Promise((resolve, reject) => later(() => reject({
-    // status: 200,
-    // message: 'this is loading test...'
-    // }), 5000));
+    //
+    // }), 2000));
     return {gid:"",sername:"1",linetype:1,sertype:0,displaytype:0,serdata:"",tips:""};
 	},
 	actions: {
