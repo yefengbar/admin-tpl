@@ -49,7 +49,7 @@
             </div>
             <p style="color:#999;padding-top:100px"></p>
 
-            <form class="m-t" role="form" action="/">
+            <form class="m-t" role="form" action="/" onsubmit="setCookie('isLogin','true')">
                 <div class="form-group name">
                 	<div class="col-lg-2"  style="padding-right: 0px;padding-left: 0px;">
                 		<i class="fa fa-user" style="font-size: 20px;line-height: 34px;color: #999;"></i>
@@ -85,6 +85,21 @@
     <!-- Mainly scripts -->
     <script src="static/js/jquery-2.1.1.min.js"></script>
     <script src="static/js/bootstrap.min.js?v=3.4.0"></script>
+    <script type="text/javascript">
+    	function setCookie(name,value){
+			var Days = 1;
+			var exp = new Date();
+			exp.setTime(exp.getTime() + Days*24*60*60*1000);
+			document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+		}
+    	function getCookie(name){
+			var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+			if(arr=document.cookie.match(reg))
+			return unescape(arr[2]);
+			else
+			return null;
+		}
+    </script>
 </body>
 
 </html>

@@ -1,13 +1,44 @@
 import Ember from 'ember';
 import RSVP from 'rsvp';
-// import layer from 'layer';
-
 import inject from 'ember-service/inject';
+import { isNone } from 'ember-utils';
+import get from 'ember-metal/get';
+import set from 'ember-metal/set';
+   import layer from 'layer';
 import { later } from 'ember-runloop';
 
 export default Ember.Route.extend({
 	ajax: inject(),
-
+	isLogin:false,
+	beforeModel(transition) {
+		this._super(...arguments);
+//	return new RSVP.Promise((resolve) => later(() => resolve(), 1000));
+		if(getCookie("isLogin") == "false" || getCookie("isLogin") == undefined ){
+			let self = this;
+			layer.msg('您未登录，请先登录！');
+			
+			Ember.run.later(transition, function() {
+				window.location.href="/login.html";
+			}, 1000);
+			transition.abort();
+		}else{
+			this.set('isLogin',true);
+//			transition.retry()
+		}
+		function setCookie(name,value){
+			var Days = 1;
+			var exp = new Date();
+			exp.setTime(exp.getTime() + Days*24*60*60*1000);
+			document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+		}
+		function getCookie(name){
+			var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+			if(arr=document.cookie.match(reg))
+			return unescape(arr[2]);
+			else
+			return null;
+		}
+	 },
   model: function () {
     return RSVP.hash({
       base: [{
@@ -114,6 +145,16 @@ export default Ember.Route.extend({
     showUi: function (type) {
       //this.transitionTo(str);
       Ember.$('#side-menu .nav_' + type).toggleClass('hidden');
+    },
+    logout:function(){
+    	setCookie('isLogin','false');
+    	function setCookie(name,value){
+			var Days = 1;
+			var exp = new Date();
+			exp.setTime(exp.getTime() + Days*24*60*60*1000);
+			document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
+		}
+    	window.location.href="/login.html";
     }
   },
   afterModel() {
