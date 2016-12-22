@@ -59,7 +59,7 @@
             </div>
             <p style="color:#999;padding-top:20px"></p>
 
-            <form class="m-t" role="form"  action="/" onsubmit="setCookie('isLogin','true')">
+            <form class="m-t" role="form"  action="/" onsubmit="setCookie('isLogin','true');return false;">
                 <div class="form-group">
                 	<div class="col-lg-2"  style="padding-right: 0px;padding-left: 0px;">
                 		<i class="fa fa-user" style="font-size: 20px;line-height: 34px;color: #999;"></i>
@@ -82,6 +82,21 @@
                 </div>
                 <div style="clear: both;"></div>
               </div>
+              <div class="col-lg-12">
+                <div class="form-group" style="border-top: 1px solid #555;"></div>
+              </div>
+              <div class="form-group">
+                <div class="col-lg-2"  style="padding-right: 0px;padding-left: 0px;">
+                  <i class="fa fa-exclamation-circle" style="font-size: 20px;line-height: 34px;color: #999;"></i>
+                </div>
+                <div class="col-lg-6" style="padding-right: 0px;padding-left: 0px;">
+                  <input type="text" class="form-control"  name="yzcode" placeholder="验证码" style="padding: 6px 0px;">
+                </div>
+                <div class="col-lg-4" style="padding-right: 0px;padding-left: 0px;">
+                  <img src="http://web.7k7k.com/source/getcode.php" alt="看不清楚，换一张" style="cursor: pointer;border-radius: 10px;opacity: 0.6;" onclick="javascript:newgdcode(this,this.src);">
+                </div>
+                <div style="clear: both;"></div>
+              </div>
               <div class="col-lg-12 telcode">
                 <div class="form-group" style="border-top: 1px solid #555;"></div>
               </div>
@@ -90,7 +105,7 @@
                   <i class="fa fa-shield" style="font-size: 20px;line-height: 34px;color: #999;"></i>
                 </div>
                 <div class="col-lg-6" style="padding-right: 0px;padding-left: 0px;">
-                  <input type="text"  name="code" placeholder="验证码" style="padding: 6px 0px;">
+                  <input type="text" class="form-control"  name="aqcode" placeholder="安全码" style="padding: 6px 0px;">
                 </div>
                 <div class="col-lg-4" style="padding-right: 0px;padding-left: 0px;">
                   <a href="javascript:;" class="btn btn-link">发 送</a>
