@@ -37,7 +37,7 @@ $(document).ready(function () {
   // $.get("skin-config.html", function (data) {
   //   $('body').append(data);
   // });
-  
+
   setTimeout(function () {
 
 
@@ -47,7 +47,7 @@ $(document).ready(function () {
       SmoothlyMenu();
     })
   }, 50)
- 
+
 
   // Move modal to body
   // Fix Bootstrap backdrop issu with animation.css
@@ -81,7 +81,7 @@ function setScroll(){
 		alwaysVisible: false,
 		});
 		}
-		
+
 // For demo purpose - animation css script
 function animationHover(element, animation) {
   element = $(element);
@@ -144,4 +144,29 @@ function WinMove() {
     })
     .disableSelection();
 };
-
+//get now time
+function getnowDate() {
+  var date = new Date();
+  var seperator1 = "-";
+  var seperator2 = ":";
+  var month = date.getMonth() + 1;
+  var strDate = date.getDate();
+  var hh = date.getHours();
+  var mm = date.getMinutes();
+  if (month >= 1 && month <= 9) {
+    month = "0" + month;
+  }
+  if (strDate >= 0 && strDate <= 9) {
+    strDate = "0" + strDate;
+  }
+  if (hh >= 0 && hh <= 9) {
+    hh = "0" + hh;
+  }
+  if (mm >= 0 && mm <= 9) {
+    mm = "0" + mm;
+  }
+  var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+    + " " + hh + seperator2 + mm;
+  // + seperator2 + date.getSeconds();
+  return currentdate;
+}

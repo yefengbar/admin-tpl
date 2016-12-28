@@ -1,5 +1,5 @@
 import Ember from 'ember';
-
+import get from 'ember-metal/get';
 export default Ember.Route.extend({
   model: function (params) {
     // console.log(params);
@@ -25,7 +25,7 @@ export default Ember.Route.extend({
       bgcolor: "",
       wlcolor: "",
       plid: "",
-      dttype: "",
+      dttype: 3,
       gamestate: "",
       gamestar: "",
       qqgroup: "",
@@ -59,14 +59,15 @@ export default Ember.Route.extend({
       }
     }
   },
-  afterModel: function () {
+  afterModel: function (model) {
+    let _model = model;
     setTimeout(function () {
-      Ember.$('#data_1 .form-control').datetimepicker({
+      Ember.$('#data_1 .form-control').attr("value", getnowDate()).datetimepicker({
         format: 'Y-m-d H:i',
         step: 60,
         autoclose: true
-      })
+      });
+      Ember.$('.selectpicker').selectpicker('val', _model.dttype);
     }, 100)
-
   }
 });

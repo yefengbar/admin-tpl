@@ -2,26 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e393f0c-ac8f-4a24-a014-0a1425b17d89" name="默认" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/game-edit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/routes/game-edit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/routes/ser-edit.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/routes/ser-list.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/game-edit.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/ser-edit.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/ser-list.hbs" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/unit/controllers/game-edit-test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/unit/routes/game-edit-test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/unit/routes/ser-edit-test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/unit/routes/ser-list-test.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/add-server.js" afterPath="$PROJECT_DIR$/app/controllers/add-server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/router.js" afterPath="$PROJECT_DIR$/app/router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/add-server.js" afterPath="$PROJECT_DIR$/app/routes/add-server.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/application.js" afterPath="$PROJECT_DIR$/app/routes/application.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/game-manager.js" afterPath="$PROJECT_DIR$/app/routes/game-manager.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/game-manager.hbs" afterPath="$PROJECT_DIR$/app/templates/game-manager.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/login.html" afterPath="$PROJECT_DIR$/public/login.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/js/wave.js" afterPath="$PROJECT_DIR$/public/static/js/wave.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/components/date-time.js" afterPath="$PROJECT_DIR$/app/components/date-time.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/game-edit.js" afterPath="$PROJECT_DIR$/app/controllers/game-edit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/game-edit.js" afterPath="$PROJECT_DIR$/app/routes/game-edit.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/game-edit.hbs" afterPath="$PROJECT_DIR$/app/templates/game-edit.hbs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/static/js/hplus.js" afterPath="$PROJECT_DIR$/public/static/js/hplus.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -42,21 +28,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="game-edit.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="game-edit.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/routes/game-edit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="28" />
-              <folding />
+            <state relative-caret-position="369">
+              <caret line="46" column="21" lean-forward="true" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="game-edit.hbs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="game-edit.hbs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/game-edit.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="125" column="49" lean-forward="true" selection-start-line="125" selection-start-column="49" selection-end-line="125" selection-end-column="49" />
+            <state relative-caret-position="18">
+              <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -65,18 +53,8 @@
       <file leaf-file-name="game-edit.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/game-edit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="add-server.hbs" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/templates/add-server.hbs">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="30" selection-end-line="16" selection-end-column="38" />
+            <state relative-caret-position="585">
+              <caret line="38" column="3" lean-forward="false" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -138,7 +116,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/app.js" />
         <option value="$PROJECT_DIR$/app/templates/add_server.loading.hbs" />
         <option value="$USER_HOME$/Desktop/shortcut.php" />
         <option value="$USER_HOME$/Desktop/save.php" />
@@ -161,7 +138,6 @@
         <option value="$PROJECT_DIR$/app/templates/components/game-list.hbs" />
         <option value="$PROJECT_DIR$/app/components/game-list.js" />
         <option value="$PROJECT_DIR$/app/templates/components/date-time.hbs" />
-        <option value="$PROJECT_DIR$/app/components/date-time.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="D:/websvn/views/layouts/ppxd.tpl" />
         <option value="$PROJECT_DIR$/app/templates/add-server.hbs" />
@@ -183,12 +159,14 @@
         <option value="$PROJECT_DIR$/app/router.js" />
         <option value="$PROJECT_DIR$/app/templates/game-manager.hbs" />
         <option value="$PROJECT_DIR$/app/routes/application.js" />
-        <option value="$PROJECT_DIR$/app/templates/game-edit.hbs" />
-        <option value="$PROJECT_DIR$/app/routes/game-edit.js" />
         <option value="$PROJECT_DIR$/app/controllers/add-server.js" />
         <option value="$PROJECT_DIR$/app/routes/add-server.js" />
-        <option value="$PROJECT_DIR$/app/controllers/game-edit.js" />
         <option value="$PROJECT_DIR$/app/routes/game-manager.js" />
+        <option value="$PROJECT_DIR$/app/templates/game-edit.hbs" />
+        <option value="$PROJECT_DIR$/app/controllers/game-edit.js" />
+        <option value="$PROJECT_DIR$/app/routes/game-edit.js" />
+        <option value="$PROJECT_DIR$/public/static/js/hplus.js" />
+        <option value="$PROJECT_DIR$/app/components/date-time.js" />
       </list>
     </option>
   </component>
@@ -280,6 +258,28 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin-tpl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin-tpl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="routes" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -299,6 +299,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin-tpl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin-tpl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -408,7 +426,7 @@
       <workItem from="1482372709847" duration="20941000" />
       <workItem from="1482463728572" duration="5092000" />
       <workItem from="1482805889551" duration="15250000" />
-      <workItem from="1482893544321" duration="16056000" />
+      <workItem from="1482893544321" duration="19063000" />
     </task>
     <task id="LOCAL-00001" summary="admin tpl">
       <created>1480736490731</created>
@@ -473,11 +491,18 @@
       <option name="project" value="LOCAL" />
       <updated>1482148593809</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add add-server-controller">
+      <created>1482917137443</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1482917137443</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="227850000" />
+    <option name="totallyTimeSpent" value="230857000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -542,13 +567,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../../ember-load/app/router.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="3" column="36" lean-forward="true" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../../ember-load/app/templates/loading.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -601,20 +619,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/game-list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="17" column="3" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="17" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/components/game-list.hbs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -626,13 +630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-6522">
           <caret line="3" column="10" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="840" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/components/date-time.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -812,6 +809,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="549">
           <caret line="158" column="4" lean-forward="true" selection-start-line="158" selection-start-column="4" selection-end-line="158" selection-end-column="4" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -819,6 +817,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="11" column="21" lean-forward="true" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -826,14 +825,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="882">
           <caret line="49" column="76" lean-forward="false" selection-start-line="49" selection-start-column="76" selection-end-line="49" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes/game-edit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -862,14 +853,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/controllers/game-edit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/add-server.hbs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -878,11 +861,61 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/components/game-list.hbs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/game-list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="2" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="8" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/game-edit.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="125" column="49" lean-forward="true" selection-start-line="125" selection-start-column="49" selection-end-line="125" selection-end-column="49" />
+        <state relative-caret-position="18">
+          <caret line="1" column="2" lean-forward="false" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="2" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/game-edit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="38" column="3" lean-forward="false" selection-start-line="38" selection-start-column="3" selection-end-line="38" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/js/hplus.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="151" column="34" lean-forward="true" selection-start-line="151" selection-start-column="34" selection-end-line="151" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/components/date-time.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="63" lean-forward="false" selection-start-line="5" selection-start-column="63" selection-end-line="5" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes/game-edit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="369">
+          <caret line="46" column="21" lean-forward="true" selection-start-line="46" selection-start-column="21" selection-end-line="46" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

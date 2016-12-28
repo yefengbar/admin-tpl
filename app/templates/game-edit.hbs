@@ -119,11 +119,12 @@
               <label class="col-sm-2 control-label">大厅游戏类型:</label>
 
               <div class="col-sm-5">
-                <select name="dttype" class="form-control selectpicker" data-style="btn-info">
+                <select name="dttype" data-value={{model.dttype}} class="form-control selectpicker"
+                data-style="btn-info" onchange={{action 'g_dttype' value='target.value'}}>
                   <option value="1" selected="selected">角色扮演</option>
-                  <option value="2">战争策略</option>
-                  <option value="3">休闲竞技</option>
-                  <option value="4">其他类型</option>
+                <option value="2">战争策略</option>
+                <option value="3">休闲竞技</option>
+                <option value="4">其他类型</option>
                 </select>
               </div>
             </div>
