@@ -1,5 +1,4 @@
 import Ember from 'ember';
-import get from 'ember-metal/get';
 export default Ember.Route.extend({
   model: function (params) {
     // console.log(params);

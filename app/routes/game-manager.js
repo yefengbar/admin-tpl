@@ -2,20 +2,25 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function () {
-    let gamelists = [];
-    for (var i = 1; i <= 158; i++) {
-      gamelists.push({
-        "id": i,
-        "key": "lycq",
-        "gname": "传奇盛世",
-        "gtype": "热血传奇",
-        "newser": "04-27",
-        "status": 0,
-        "display": "1"
-      });
+    // let gamelists = [];
+    Ember.$.post('http://web.7k7k.com/staff/api/games_list.php', {"action": "test"}, doto);
+    function doto(gamelists) {
+      return gamelists;
     }
+
+    // for (var i = 1; i <= 158; i++) {
+    //   gamelists.push({
+    //     "id": i,
+    //     "key": "lycq",
+    //     "gname": "传奇盛世",
+    //     "gtype": "热血传奇",
+    //     "newser": "04-27",
+    //     "status": 0,
+    //     "display": "1"
+    //   });
+    // }
     // console.log(gamelists[0]);
-    return gamelists;
+    // return gamelists;
   },
   afterModel:function (posts, transition) {
     setTimeout(function () {
