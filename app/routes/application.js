@@ -16,7 +16,7 @@ export default Ember.Route.extend({
 		if(getCookie("isLogin") == "false" || getCookie("isLogin") == undefined ){
 			let self = this;
 			layer.msg('您未登录，请先登录！');
-			
+
 			Ember.run.later(transition, function() {
 				window.location.href="/login.html";
 			}, 1000);
@@ -158,6 +158,6 @@ export default Ember.Route.extend({
     }
   },
   afterModel() {
-    Ember.$('body').append('<script src="static/js/hplus.js?v=2.2.0"></script>');
+    Ember.$('body').append('<script src="/static/js/hplus.js?v=2.2.0"></script>');
   }
 });

@@ -1,0 +1,328 @@
+<div class="wrapper wrapper-content row">
+  <div class="col-lg-12">
+    <div class="ibox float-e-margins">
+      <div class="ibox-title" style="background-color: #f9f9f9">
+        <h5>编辑游戏
+          <small>--[{{model.gname}}]</small>
+        </h5>
+      </div>
+      <div class="ibox-content">
+        <div class="col-lg-12" style="float: none;margin:10px auto">
+          <form class="form-horizontal" onsubmit="return false" name="form" id="form">
+
+
+            <div class="form-group">
+              <label class="col-sm-2 control-label">游戏名称:</label>
+              <div class="col-sm-10" style="padding:0">
+
+                <div class="col-sm-3">
+                  <span class="help-block m-b-none"> 游戏名称:</span>
+                  {{input type="text" name="gname" value=model.gname class="form-control"}}
+
+                </div>
+                <div class="col-sm-3">
+                  <span class="help-block m-b-none"> 游戏key:</span>
+                  {{input type="text" name="key" value=model.key class="form-control"}}
+                </div>
+                <div class="col-sm-3">
+                  <span class="help-block m-b-none"> 游戏全拼:</span>
+                  {{input type="text" name="pinyin" value=model.pinyin class="form-control"}}
+                </div>
+                <div class="col-sm-3">
+                  <span class="help-block m-b-none"> 游戏id:</span>
+                  {{input type="text" name="gameid" value=model.gameid class="form-control" readonly="readonly"}}
+                </div>
+                <div class="col-sm-3">
+                  <span class="help-block m-b-none"> 游戏汇率（一人民币等于）:</span>
+                  {{input type="text" name="convert" value=model.convert class="form-control"}}
+                </div>
+                <div class="col-sm-3">
+                  <span class="help-block m-b-none"> 货币单位:</span>
+                  {{input type="text" name="unit" value=model.unit class="form-control"}}
+                </div>
+              </div>
+            </div>
+            <div class="hr-line-dashed"></div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">充值地址:</label>
+              <div class="col-sm-10">
+                {{input type="text" name="recharge" value=model.recharge class="form-control" }}
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">v1官网推荐图片:</label>
+              <div class="col-sm-10">
+                {{input type="text" name="tjurl2" value=model.tjurl2 class="form-control" }}
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">新手卡图片:</label>
+              <div class="col-sm-10">
+                {{input type="text" name="tjurl3" value=model.tjurl3 class="form-control" }}
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">官网链接地址:</label>
+              <div class="col-sm-10">
+                {{input type="text" name="linkurl1" value=model.linkurl1 class="form-control" }}
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">官网title:</label>
+              <div class="col-sm-10">
+                {{input type="text" name="gametitle" value=model.gametitle class="form-control" }}
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">用户中心链接地址:</label>
+              <div class="col-sm-10">
+                {{input type="text" name="linkurl2" value=model.linkurl2 class="form-control" }}
+              </div>
+            </div>
+            <div class="hr-line-dashed"></div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">游戏类型:</label>
+              <div class="col-sm-10" style="padding:0">
+
+                <div class="col-sm-3">
+                  <span class="help-block m-b-none"> 游戏类型:</span>
+                  {{input type="text" name="gametype" value=model.gametype class="form-control"}}
+                </div>
+                <div class="col-sm-3">
+                  <span class="help-block m-b-none"> bbs公告id:</span>
+                  {{input type="text" name="newsfid" value=model.newsfid class="form-control"}}
+                </div>
+                <div class="col-sm-3">
+                  <span class="help-block m-b-none"> bbs资料id:</span>
+                  {{input type="text" name="infofid" value=model.infofid class="form-control"}}
+                </div>
+                <div class="col-sm-3">
+                  <span class="help-block m-b-none"> bbs攻略id:</span>
+                  {{input type="text" name="gongluefid" value=model.gongluefid class="form-control" }}
+                </div>
+                <div class="col-sm-3">
+                  <span class="help-block m-b-none"> 官网背景颜色:</span>
+                  {{input type="text" name="bgcolor" value=model.bgcolor class="form-control"}}
+                </div>
+                <div class="col-sm-3">
+                  <span class="help-block m-b-none"> 物料背景颜色:</span>
+                  {{input type="text" name="wlcolor" value=model.wlcolor class="form-control"}}
+                </div>
+                <div class="col-sm-3">
+                  <span class="help-block m-b-none"> 物料评论id:</span>
+                  {{input type="text" name="plid" value=model.plid class="form-control"}}
+                </div>
+              </div>
+            </div>
+            <div class="hr-line-dashed"></div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">大厅游戏类型:</label>
+
+              <div class="col-sm-5">
+                <select name="dttype" class="form-control selectpicker" data-style="btn-info">
+                  <option value="1" selected="selected">角色扮演</option>
+                  <option value="2">战争策略</option>
+                  <option value="3">休闲竞技</option>
+                  <option value="4">其他类型</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">游戏状态:</label>
+              <div class="col-sm-10">
+                {{input type="text" name="gamestate" value=model.gamestate class="form-control" }}
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">游戏星级:</label>
+              <div class="col-sm-10">
+                {{input type="text" name="gamestar" value=model.gamestar class="form-control" }}
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">官方QQ群:</label>
+              <div class="col-sm-10">
+                {{input type="text" name="qqgroup" value=model.qqgroup class="form-control" }}
+              </div>
+            </div>
+            <div class="hr-line-dashed"></div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">官方网站:</label>
+              <div class="col-sm-10">
+                {{input type="text" name="siteurl" value=model.siteurl class="form-control" }}
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">新手指南:</label>
+              <div class="col-sm-10">
+                {{input type="text" name="xinshou" value=model.xinshou class="form-control" }}
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">相关活动:</label>
+              <div class="col-sm-10">
+                {{input type="text" name="about" value=model.about class="form-control" }}
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">进入游戏:</label>
+              <div class="col-sm-10">
+                {{input type="text" name="gogame" value=model.gogame class="form-control" }}
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">bbs地址:</label>
+              <div class="col-sm-10">
+                {{input type="text" name="gamebbs" value=model.gamebbs class="form-control" }}
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">新手卡地址:</label>
+              <div class="col-sm-10">
+                {{input type="text" name="newcodeurl" value=model.newcodeurl class="form-control" }}
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">游戏简介:</label>
+              <div class="col-sm-10">
+                {{textarea name="gamesinfo" value=model.gamesinfo class="form-control" cols="80" rows="6"}}
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">游戏排序:</label>
+              <div class="col-sm-10">
+                {{input type="text" name="gamessort" value=model.gamessort class="form-control" }}
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">运营时间:</label>
+              <div class="col-sm-10">
+                {{date-time postDatas=(action 'postData') value=model.gamestime}}
+                <!--<span class="help-block m-b-none">开服日期时间必须准确否则开服表上没有哦~~~</span>-->
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">新手卡内容:</label>
+              <div class="col-sm-10">
+                {{textarea name="codecontent" value=model.codecontent class="form-control" cols="80" rows="6"}}
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">新手卡使用说明:</label>
+              <div class="col-sm-10">
+                {{input type="text" name="codeuse" value=model.codeuse class="form-control" }}
+                <span class="help-block m-b-none">【注意】：每个账号只能在一个区服里兑换一次！</span>
+              </div>
+            </div>
+            <div class="hr-line-dashed"></div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">游戏所属类型:</label>
+              <div class="col-sm-10">
+                <label class="radio-inline">
+                  <input type="radio" checked={{if model.gtype "checked" false }} name="gtype" onclick={{action
+                    'setRadioVal' 'ge_gtype' '1'}}>联运游戏</label>
+                <label class="radio-inline">
+                  <input type="radio" checked={{if model.gtype false "checked"}} name="gtype" onclick={{action
+                    'setRadioVal' 'ge_gtype' '2'}}>社区游戏</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">新手卡显示:</label>
+              <div class="col-sm-10">
+                <label class="radio-inline">
+                  <input type="radio" checked={{if model.codeshow "checked" false }} name="codeshow" onclick={{action
+                    'setRadioVal' 'ge_codeshow' '1'}}>是</label>
+                <label class="radio-inline">
+                  <input type="radio" checked={{if model.codeshow false "checked" }} name="codeshow" onclick={{action
+                    'setRadioVal' 'ge_codeshow' '0'}}>否</label>
+                <span class="help-block m-b-none">是否显示在领取新手卡页面</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">平台游戏推荐:</label>
+              <div class="col-sm-10">
+                <label class="radio-inline">
+                  <input type="radio" checked={{if model.tuijian "checked" false }} name="tuijian" onclick={{action
+                    'setRadioVal' 'ge_tuijian' '1'}}>是</label>
+                <label class="radio-inline">
+                  <input type="radio" checked={{if model.tuijian false "checked" }} name="tuijian" onclick={{action
+                    'setRadioVal' 'ge_tuijian' '0'}}>否</label>
+                <span class="help-block m-b-none">首页推荐游戏</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">专区游戏推荐:</label>
+              <div class="col-sm-10">
+                <label class="radio-inline">
+                  <input type="radio" checked={{if model.tuijian2 "checked" false}} name="tuijian2" onclick={{action
+                    'setRadioVal' 'ge_tuijian2' '1'}}>是</label>
+                <label class="radio-inline">
+                  <input type="radio" checked={{if model.tuijian2  false "checked"}} name="tuijian2" onclick={{action
+                    'setRadioVal' 'ge_tuijian2' '0'}}>否</label>
+                <span class="help-block m-b-none">内页推荐游戏</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">游戏状态:</label>
+              <div class="col-sm-10">
+                <label class="radio-inline">
+                  <input type="radio" checked={{if model.gamestatus "checked" false}} name="gamestatus" onclick={{action
+                    'setRadioVal' 'ge_gamestatus' '1'}}>开启</label>
+                <label class="radio-inline">
+                  <input type="radio" checked={{if model.gamestatus false "checked" }} name="gamestatus"
+                         onclick={{action 'setRadioVal' 'ge_gamestatus' '0'}}>关闭</label>
+                <span class="help-block m-b-none">选择关闭即所有入口消失，平台无任何显示，充值关闭</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">平台内容显示:</label>
+              <div class="col-sm-10">
+                <label class="radio-inline">
+                  <input type="radio" checked={{if model.isshow "checked" false}} name="isshow" onclick={{action
+                    'setRadioVal' 'ge_isshow' '1'}}>开启</label>
+                <label class="radio-inline">
+                  <input type="radio" checked={{if model.isshow false "checked"}} name="isshow" onclick={{action
+                    'setRadioVal' 'ge_isshow' '0'}}>关闭</label>
+                <!--<span class="help-block m-b-none">是否显示在领取新手卡页面</span>-->
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">充值显示:</label>
+              <div class="col-sm-10">
+                <label class="radio-inline">
+                  <input type="radio" checked={{if model.ispay "checked" false}} name="ispay" onclick={{action
+                    'setRadioVal' 'ge_ispay' '1'}}>开启</label>
+                <label class="radio-inline">
+                  <input type="radio" checked={{if model.ispay false "checked"}} name="ispay" onclick={{action
+                    'setRadioVal' 'ge_ispay' '0'}}>关闭</label>
+                <span class="help-block m-b-none">选择关闭即控制所有充值接口，包括直冲，骏网等</span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label">官网推荐:</label>
+              <div class="col-sm-10">
+                <label class="radio-inline">
+                  <input type="radio" checked={{if model.iswebtuijian "checked" false}} name="iswebtuijian"
+                         onclick={{action 'setRadioVal' 'ge_iswebtuijian' '1'}}>是</label>
+                <label class="radio-inline">
+                  <input type="radio" checked={{if model.iswebtuijian false "checked"}} name="iswebtuijian"
+                         onclick={{action 'setRadioVal' 'ge_iswebtuijian' '0'}}>否</label>
+                <span class="help-block m-b-none">是否显示在领取新手卡页面</span>
+              </div>
+            </div>
+            <div class="hr-line-dashed"></div>
+            <div class="form-group">
+              <label class="col-sm-2 control-label"></label>
+              <div class="col-sm-8">
+                <input type="hidden" id="action" name="action" value="games_update">
+                <input type="hidden" id="gid" name="gid" value="{{model.gameid}}">
+                <botton class="btn btn-info btn-block" {{action 'send'}}>保 存</botton>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

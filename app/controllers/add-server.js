@@ -56,10 +56,6 @@ export default Ember.Controller.extend({
     },
     ac_displaytype:function (params) {
       this.set('displaytype',params)
-    },
-    postData:function (params) {
-      this.set('serdata',params);
-      console.log('Controller.serdata:' + params);
     }
   },
   getnowDate:function  () {

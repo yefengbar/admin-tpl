@@ -11,9 +11,9 @@ var windowHalfY = window.innerHeight / 2;
 $(function () {
   setTimeout(function () {
     init();
-    $('canvas').fadeIn(500);
+    $('canvas').fadeIn(800);
     animate();
-  },150)
+  }, 1000)
 
 });
 function init() {
@@ -25,10 +25,13 @@ function init() {
   particles = new Array();
   var PI2 = Math.PI * 2;
   var material = new THREE.ParticleCanvasMaterial( {
-    color: 0xec0c0c0,
+    color: 0xe666666,
     program: function ( context ) {
       context.beginPath();
       context.arc( 0, 0, 1, 0, PI2, true );
+      // context.fill();
+      // context.shadowBlur=10;
+      // context.shadowColor="#666666";
       context.fill();
     }
   } );
