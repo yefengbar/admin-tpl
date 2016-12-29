@@ -1,4 +1,4 @@
-<!--{{outlet}}-->
+
 <div class="wrapper wrapper-content animated fadeInRight">
   <div class="row">
     <div class="col-lg-12">
@@ -31,29 +31,20 @@
             </tr>
             </thead>
             <tbody>
-            <!--<tr>-->
-            <!--<td align="center">479</td>-->
-            <!--<td align="center"><a href="games_edit.php?gid=479">蓝月传奇</a></td>-->
-            <!--<td align="center"><a href="server_list.php?action=server_list&gid=479" >服务器列表</a></td>-->
-            <!--<td align="center"><a href="more_server_list.php?action=showserver&gid=479" >区服管理</a></td>-->
-            <!--<td align="center">热血传奇</td>-->
-            <!--<td align="center">04-27</td>-->
-            <!--<td align="center"><span class="green">正常运行</span></td>-->
-            <!--<td align="center"><span class="green">是</span></td>-->
-            <!--<td align="center"><a href="games_edit.php?gid=479" title="编辑游戏">修改</a></td>-->
-            <!--</tr>-->
             {{#each model as |glist|}}
               <tr>
-                <td align="center">{{glist.id}}</td>
-                <td align="center">{{#link-to "game-edit" glist.id title=glist.gname}}{{glist.gname}}{{/link-to}}</td>
+                <td align="center">{{glist.gid}}</td>
+                <td align="center">{{#link-to "game-edit" glist.gid title=glist.gname}}{{glist.gname}}{{/link-to}}</td>
                 <td align="center">{{#link-to "news"}}服务器列表{{/link-to}}</td>
                 <td align="center">{{#link-to "news" }}区服管理{{/link-to}}</td>
-                <td align="center">{{glist.gtype}}</td>
-                <td align="center">{{glist.newser}}</td>
-                <td align="center">{{#if glist.status}}<span class="text-info">正常运行</span>{{else}}
-                  <span class="text-danger">暂停运行</span>{{/if}}</td>
-                <td align="center">{{#if glist.display}}<span class="text-info">是</span>{{else}}
-                  <span class="text-danger">否</span>{{/if}}</td>
+                <td align="center">{{glist.gametype}}</td>
+                <td align="center">{{glist.gamestate}}</td>
+                <td align="center"><span class="text-{{if-t glist.gamestatus 'info' 'danger'}}">{{if-t glist.gamestatus
+                                                                                                       '正常运行'
+                                                                                                       '暂停运行'}}</span>
+                </td>
+                <td align="center"><span class="text-{{if-t glist.isshow 'info' 'danger'}}">{{if-t glist.isshow '是'
+                                                                                                   '否'}}</span></td>
                 <td align="center">{{#link-to "news" title="编辑游戏"}}修改{{/link-to}}</td>
               </tr>
             {{else}}

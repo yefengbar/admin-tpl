@@ -13,18 +13,18 @@ export default Ember.Route.extend({
 	beforeModel(transition) {
 		this._super(...arguments);
 //	return new RSVP.Promise((resolve) => later(() => resolve(), 1000));
-		if(getCookie("isLogin") == "false" || getCookie("isLogin") == undefined ){
-			let self = this;
-			layer.msg('您未登录，请先登录！');
-
-			Ember.run.later(transition, function() {
-				window.location.href="/login.html";
-			}, 1000);
-			transition.abort();
-		}else{
-			this.set('isLogin',true);
-//			transition.retry()
-		}
+// 		if(getCookie("isLogin") == "false" || getCookie("isLogin") == undefined ){
+// 			let self = this;
+// 			layer.msg('您未登录，请先登录！');
+//
+// 			Ember.run.later(transition, function() {
+// 				window.location.href="/staff/login.php";
+// 			}, 1000);
+// 			transition.abort();
+// 		}else{
+// 			this.set('isLogin',true);
+// //			transition.retry()
+// 		}
 		function setCookie(name,value){
 			var Days = 1;
 			var exp = new Date();
@@ -154,10 +154,11 @@ export default Ember.Route.extend({
 			exp.setTime(exp.getTime() + Days*24*60*60*1000);
 			document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
 		}
-    	window.location.href="/login.html";
+
+      window.location.href = "/staff/login.php";
     }
   },
   afterModel() {
-    Ember.$('body').append('<script src="/static/js/hplus.js?v=2.2.0"></script>');
+    Ember.$('body').append('<script src="/staff/static/js/hplus.js?v=2.2.0"></script>');
   }
 });

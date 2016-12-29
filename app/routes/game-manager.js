@@ -2,11 +2,10 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function () {
-    // let gamelists = [];
-    Ember.$.post('http://web.7k7k.com/staff/api/games_list.php', {"action": "test"}, doto);
-    function doto(gamelists) {
-      return gamelists;
-    }
+    let gamelists = Ember.$.post('http://web.7k7k.com/staff/api/games_list.php', {"action": "games_list"}, function (res) {
+      return res.toString().replace(/"0"/g, 0).replace(/"1"/g, 1);
+    }, 'json');
+
 
     // for (var i = 1; i <= 158; i++) {
     //   gamelists.push({
@@ -20,18 +19,18 @@ export default Ember.Route.extend({
     //   });
     // }
     // console.log(gamelists[0]);
-    // return gamelists;
+    return eval(gamelists);
   },
-  afterModel:function (posts, transition) {
+  afterModel: function (model, transition) {
     setTimeout(function () {
-      let table = Ember.$('.dataTables').DataTable({
-        "lengthChange": true,
-        "lengthMenu": [[15, 50, 100, -1], [15, 50, 100, "全部"]],
-        "processing": true,
-        "orderClasses": true
-      });
-      table.page.len(15).draw();
-    },100);
+      // let table = Ember.$('.dataTables').DataTable({
+      //   "lengthChange": true,
+      //   "lengthMenu": [[15, 50, 100, -1], [15, 50, 100, "全部"]],
+      //   "processing": true,
+      //   "orderClasses": true
+      // });
+      // table.page.len(15).draw();
+    }, 1000);
 
   }
 });

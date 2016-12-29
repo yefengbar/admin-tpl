@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'web',
     environment: environment,
-    rootURL: '/',
+    rootURL: '/staff',
     locationType: 'auto',
     EmberENV: {
       FEATURES: {
@@ -29,7 +29,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV.rootURL = '/'
+    ENV.rootURL = '/staff'
   }
 
   if (environment === 'test') {
@@ -44,7 +44,7 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.rootURL = '/login'
+    ENV.rootURL = '/staff'
   }
 
   return ENV;

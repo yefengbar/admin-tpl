@@ -147,13 +147,19 @@
           return null;
       }
       function send_login() {
-        var url = 'http://web.7k7k.com/staff/api/login.php?action=login&username=hanchaoqun&password=hcq_qd_0520&yzcode=2cf2&aqcode=&submituser=submituser'
-        $.getJSON(url, function (data) {
-          if (data.status == 1) {
-            window.location.href = "http://localhost:4200/"
-          }
-          ;
-        });
+        var url = 'http://web.7k7k.com/staff/api/login.php'
+        $.post(url, {
+            "action": "login",
+            "username": "hanchaoqun",
+            "password": "hcq_qd_0520",
+            "code": $('input[name="yzcode"]').val(),
+            "aqcode": "",
+            "submituser": "submituser"
+          },
+          function (data) {
+            if (data.status == 0) alert(data.info)
+          },
+          "json");
       }
       function setCookie(name,value){
         var Days = 1;
@@ -161,8 +167,13 @@
         exp.setTime(exp.getTime() + Days*24*60*60*1000);
         document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
       }
+
+      function newgdcode(obj, url) {
+        obj.src = url + '?nowtime=' + new Date().getTime();
+      }
+
     </script>
-  <script type="text/javascript" src="static/js/three.min.js"></script>
-  <script type="text/javascript" src="static/js/wave.js"></script>
+    <!--<script type="text/javascript" src="static/js/three.min.js"></script>-->
+    <!--<script type="text/javascript" src="static/js/wave.js"></script>-->
 </body>
 </html>

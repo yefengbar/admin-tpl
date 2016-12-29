@@ -13,7 +13,7 @@ Router.map(function() {
   this.route('new', {path: 'news/:new_id'});
   this.route('add-server');
   this.route('game-manager');
-  this.route('game-edit', {path: 'game-manager/:game_id'});
+  this.route('game-edit', {path: 'game-edit/:game_id'});
   // this.route('game-edit');
   this.route('ser-list');
 
