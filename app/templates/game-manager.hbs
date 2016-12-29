@@ -34,7 +34,7 @@
             {{#each model as |glist|}}
               <tr>
                 <td align="center">{{glist.gid}}</td>
-                <td align="center">{{#link-to "game-edit" glist.gid title=glist.gname}}{{glist.gname}}{{/link-to}}</td>
+                <td align="center">{{#link-to "game-edit" glist title=glist.gname}}{{glist.gname}}{{/link-to}}</td>
                 <td align="center">{{#link-to "news"}}服务器列表{{/link-to}}</td>
                 <td align="center">{{#link-to "news" }}区服管理{{/link-to}}</td>
                 <td align="center">{{glist.gametype}}</td>

@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7e393f0c-ac8f-4a24-a014-0a1425b17d89" name="默认" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/helpers/if-t.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/unit/helpers/if-t-test.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/router.js" afterPath="$PROJECT_DIR$/app/router.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/application.js" afterPath="$PROJECT_DIR$/app/routes/application.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes/game-manager.js" afterPath="$PROJECT_DIR$/app/routes/game-manager.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/game-manager.hbs" afterPath="$PROJECT_DIR$/app/templates/game-manager.hbs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/environment.js" afterPath="$PROJECT_DIR$/config/environment.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/login.html" afterPath="$PROJECT_DIR$/public/login.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,23 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="application.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/routes/application.js">
+      <file leaf-file-name="game-edit.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/routes/game-edit.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="26" column="7" lean-forward="false" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-              <folding>
-                <marker date="1482999465378" expanded="true" signature="307:5572" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="game-manager.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/routes/game-manager.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+            <state relative-caret-position="738">
+              <caret line="56" column="31" lean-forward="false" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -59,18 +41,18 @@
       <file leaf-file-name="game-manager.hbs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/templates/game-manager.hbs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="42" column="128" lean-forward="false" selection-start-line="42" selection-start-column="128" selection-end-line="42" selection-end-column="128" />
+            <state relative-caret-position="486">
+              <caret line="46" column="100" lean-forward="false" selection-start-line="46" selection-start-column="100" selection-end-line="46" selection-end-column="100" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="if-t.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/helpers/if-t.js">
+      <file leaf-file-name="game-manager.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/routes/game-manager.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="270">
+              <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -180,8 +162,8 @@
         <option value="$PROJECT_DIR$/config/environment.js" />
         <option value="$PROJECT_DIR$/app/routes/application.js" />
         <option value="$PROJECT_DIR$/app/router.js" />
-        <option value="$PROJECT_DIR$/app/routes/game-manager.js" />
         <option value="$PROJECT_DIR$/app/helpers/if-t.js" />
+        <option value="$PROJECT_DIR$/app/routes/game-manager.js" />
         <option value="$PROJECT_DIR$/app/templates/game-manager.hbs" />
       </list>
     </option>
@@ -432,7 +414,7 @@
       <workItem from="1482805889551" duration="15250000" />
       <workItem from="1482893544321" duration="23136000" />
       <workItem from="1482977219274" duration="5624000" />
-      <workItem from="1482998570929" duration="11602000" />
+      <workItem from="1482998570929" duration="12708000" />
     </task>
     <task id="LOCAL-00001" summary="admin tpl">
       <created>1480736490731</created>
@@ -518,11 +500,18 @@
       <option name="project" value="LOCAL" />
       <updated>1482926008430</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="add if-t helper and test online data">
+      <created>1483011332311</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1483011332311</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="252156000" />
+    <option name="totallyTimeSpent" value="253262000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -537,7 +526,7 @@
     <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14375" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287841" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32860824" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -573,7 +562,8 @@
     <MESSAGE value="add add-server-controller" />
     <MESSAGE value="add game-edit/game-manage/ser-edit,and fixed datatimepicker,s default display" />
     <MESSAGE value="fixed staff api" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed staff api" />
+    <MESSAGE value="add if-t helper and test online data" />
+    <option name="LAST_COMMIT_MESSAGE" value="add if-t helper and test online data" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -838,6 +828,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="49" column="7" lean-forward="true" selection-start-line="49" selection-start-column="7" selection-end-line="49" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -855,13 +848,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes/game-edit.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="51" column="69" lean-forward="false" selection-start-line="51" selection-start-column="7" selection-end-line="51" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/config/environment.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -870,28 +856,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="26" column="7" lean-forward="false" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
-          <folding>
-            <marker date="1482999465378" expanded="true" signature="307:5572" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/router.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="15" column="50" lean-forward="false" selection-start-line="15" selection-start-column="50" selection-end-line="15" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes/game-manager.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -904,10 +872,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes/application.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="26" column="7" lean-forward="false" selection-start-line="26" selection-start-column="7" selection-end-line="26" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes/game-manager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="29" lean-forward="false" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes/game-edit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="56" column="31" lean-forward="false" selection-start-line="56" selection-start-column="31" selection-end-line="56" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/game-manager.hbs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="42" column="128" lean-forward="false" selection-start-line="42" selection-start-column="128" selection-end-line="42" selection-end-column="128" />
+        <state relative-caret-position="486">
+          <caret line="46" column="100" lean-forward="false" selection-start-line="46" selection-start-column="100" selection-end-line="46" selection-end-column="100" />
           <folding />
         </state>
       </provider>

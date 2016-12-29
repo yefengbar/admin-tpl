@@ -3,7 +3,7 @@ import Ember from 'ember';
 export default Ember.Route.extend({
   model: function () {
     let gamelists = Ember.$.post('http://web.7k7k.com/staff/api/games_list.php', {"action": "games_list"}, function (res) {
-      return res.toString().replace(/"0"/g, 0).replace(/"1"/g, 1);
+      return res;
     }, 'json');
 
 
@@ -23,13 +23,13 @@ export default Ember.Route.extend({
   },
   afterModel: function (model, transition) {
     setTimeout(function () {
-      // let table = Ember.$('.dataTables').DataTable({
-      //   "lengthChange": true,
-      //   "lengthMenu": [[15, 50, 100, -1], [15, 50, 100, "全部"]],
-      //   "processing": true,
-      //   "orderClasses": true
-      // });
-      // table.page.len(15).draw();
+      let table = Ember.$('.dataTables').DataTable({
+        "lengthChange": true,
+        "lengthMenu": [[15, 50, 100, -1], [15, 50, 100, "全部"]],
+        "processing": true,
+        "orderClasses": true
+      });
+      table.page.len(15).draw();
     }, 1000);
 
   }
