@@ -21,7 +21,6 @@ export default Ember.Route.extend({
       Ember.$.post('http://web.7k7k.com/staff/login.php', {"action": "islogin"}, function (res) {
         if (res.status == 1) {
           _this.set('isLogin', res.ip);
-          _this.set('isLogin', res.name);
           console.log("local_ip:" + res.ip);
         } else {
           transition.abort();
