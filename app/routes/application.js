@@ -1,43 +1,37 @@
 import Ember from 'ember';
 import RSVP from 'rsvp';
 import inject from 'ember-service/inject';
-import { isNone } from 'ember-utils';
-import get from 'ember-metal/get';
-import set from 'ember-metal/set';
-   import layer from 'layer';
+import layer from 'layer';
 import { later } from 'ember-runloop';
+import config from '../config/environment';
+
 
 export default Ember.Route.extend({
 	ajax: inject(),
 	isLogin:false,
+  username: "韩超群",
+  // setupController: function(controller) {
+  // controller.set('envUrl',config.rootURL);
+  // controller.set("username",this.get("username"));
+  // },
 	beforeModel(transition) {
 		this._super(...arguments);
-//	return new RSVP.Promise((resolve) => later(() => resolve(), 1000));
-// 		if(getCookie("isLogin") == "false" || getCookie("isLogin") == undefined ){
-// 			let self = this;
-// 			layer.msg('您未登录，请先登录！');
-//
-// 			Ember.run.later(transition, function() {
-// 				window.location.href="/staff/login.php";
-// 			}, 1000);
-// 			transition.abort();
-// 		}else{
-// 			this.set('isLogin',true);
-// //			transition.retry()
-// 		}
-		function setCookie(name,value){
-			var Days = 1;
-			var exp = new Date();
-			exp.setTime(exp.getTime() + Days*24*60*60*1000);
-			document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
-		}
-		function getCookie(name){
-			var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
-			if(arr=document.cookie.match(reg))
-			return unescape(arr[2]);
-			else
-			return null;
-		}
+    let _this = this;
+    if (config.rootURL.length > 1) {
+      Ember.$.post('http://web.7k7k.com/staff/login.php', {"action": "islogin"}, function (res) {
+        if (res.status == 1) {
+          _this.set('isLogin', res.ip);
+          _this.set('isLogin', res.name);
+          console.log("local_ip:" + res.ip);
+        } else {
+          transition.abort();
+          layer.msg('您未登录，请先登录！');
+          Ember.run.later(transition, function () {
+            window.location.href = config.rootURL + "login.php";
+          }, 1000);
+        }
+      }, 'json');
+    }
 	 },
   model: function () {
     return RSVP.hash({
@@ -147,18 +141,15 @@ export default Ember.Route.extend({
       Ember.$('#side-menu .nav_' + type).toggleClass('hidden');
     },
     logout:function(){
-    	setCookie('isLogin','false');
-    	function setCookie(name,value){
-			var Days = 1;
-			var exp = new Date();
-			exp.setTime(exp.getTime() + Days*24*60*60*1000);
-			document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString();
-		}
-
-      window.location.href = "/staff/login.php";
+      Ember.$.post('http://web.7k7k.com/staff/logout.php');
+      if (config.rootURL.length > 1) {
+        window.location.href = "staff/login.php";
+      } else {
+        window.location.href = "/login.html";
+      }
     }
   },
   afterModel() {
-    Ember.$('body').append('<script src="/staff/static/js/hplus.js?v=2.2.0"></script>');
+    Ember.$('body').append('<script src="' + config.rootURL + 'static/js/hplus.js?v=2.2.0"></script>');
   }
 });

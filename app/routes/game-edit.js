@@ -54,7 +54,7 @@ export default Ember.Route.extend({
       if (res.status == 1) {
         layer.alert('添加成功！')
       } else {
-        // layer.alert('添加失败！')
+        layer.alert('添加失败！')
       }
     }
   },

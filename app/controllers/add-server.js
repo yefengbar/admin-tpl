@@ -6,7 +6,7 @@ export default Ember.Controller.extend({
   linetype:1,
   sertype:1,
   displaytype:1,
-  serdata:this.getnowDate,
+  serdata: "",
   tips:"稍后开启，敬请期待！！！",
   actions: {
     send: function (params) {

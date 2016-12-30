@@ -5,20 +5,6 @@ export default Ember.Route.extend({
     let gamelists = Ember.$.post('http://web.7k7k.com/staff/api/games_list.php', {"action": "games_list"}, function (res) {
       return res;
     }, 'json');
-
-
-    // for (var i = 1; i <= 158; i++) {
-    //   gamelists.push({
-    //     "id": i,
-    //     "key": "lycq",
-    //     "gname": "传奇盛世",
-    //     "gtype": "热血传奇",
-    //     "newser": "04-27",
-    //     "status": 0,
-    //     "display": "1"
-    //   });
-    // }
-    // console.log(gamelists[0]);
     return eval(gamelists);
   },
   afterModel: function (model, transition) {
@@ -30,7 +16,7 @@ export default Ember.Route.extend({
         "orderClasses": true
       });
       table.page.len(15).draw();
-    }, 1000);
+    }, 100);
 
   }
 });

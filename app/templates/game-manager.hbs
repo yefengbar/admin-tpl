@@ -19,7 +19,7 @@
           <table class="table table-striped table-hover dataTables">
             <thead>
             <tr>
-              <td width="50" align="center"><b>ID</b></td>
+              <td width="50" align="center"><b>GID</b></td>
               <td width="200" align="center"><b>游戏名称</b></td>
               <td width="100" align="center"><b>服务器列表</b></td>
               <td width="100" align="center"><b>批量区服管理</b></td>
@@ -34,7 +34,7 @@
             {{#each model as |glist|}}
               <tr>
                 <td align="center">{{glist.gid}}</td>
-                <td align="center">{{#link-to "game-edit" glist title=glist.gname}}{{glist.gname}}{{/link-to}}</td>
+                <td align="center">{{#link-to "game-edit" glist.gid title=glist.gname}}{{glist.gname}}{{/link-to}}</td>
                 <td align="center">{{#link-to "news"}}服务器列表{{/link-to}}</td>
                 <td align="center">{{#link-to "news" }}区服管理{{/link-to}}</td>
                 <td align="center">{{glist.gametype}}</td>
