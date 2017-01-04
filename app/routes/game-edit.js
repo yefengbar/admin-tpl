@@ -13,18 +13,38 @@ export default Ember.Route.extend({
   afterModel: function (model) {
     let _model = model;
     setTimeout(function () {
-      let ftime = getDate(_model.gamestime);
-      Ember.$('#data_1 .form-control').attr("value", ftime).datetimepicker({
-        format: 'Y-m-d',
-        step: 60,
-        autoclose: true
-      });
-      function getDate(tm){
-        var tt=new Date(parseInt(tm) * 1000).toLocaleString().replace(/年|月|日|上午|下午/g, "").replace(/\//g, "-");
-        return tt;
-      };
-      let dttype_arr = (["角色扮演","战争策略","休闲竞技","其他类型"].indexOf("\'"+_model.dttype+"\'"))+1;
-      Ember.$('.selectpicker').selectpicker('val', dttype_arr);
-    }, 100)
+      Ember.$('#data_1 .form-control').attr("value", formatDate(_model.gamestime)).datetimepicker('update');
+      // Ember.$('#data_1 .form-control').datetimepicker({
+      //   format: 'Y-m-d',
+      //   step: 60,
+      //   autoclose: true
+      // });
+      Ember.$('.selectpicker').selectpicker('val', _model.dttype);
+    }, 100);
+    function formatDate(now) {
+      now = new Date(parseInt(now) * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ');
+      var year = now.getYear();
+      var month = now.getMonth() + 1;
+      var date = now.getDate();
+      var hour = now.getHours();
+      var minute = now.getMinutes();
+      if (month < 10) {
+        month = "0" + month;
+      }
+      if (date < 10) {
+        date = "0" + date;
+      }
+      if (hour < 10) {
+        hour = "0" + hour;
+      }
+      if (minute < 10) {
+        minute = "0" + minute;
+      }
+      return year + "-" + month + "-" + date + "   " + hour + ":" + minute;
+    }
+
+    function getLocalTime(nS) {
+      return new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ');
+    }
   }
 });
