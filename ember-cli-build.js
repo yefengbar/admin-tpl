@@ -1,9 +1,17 @@
 /*jshint node:true*/
 /* global require, module */
+var crypto = require('crypto');
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
+    // fingerprint:{
+    //   customHash:function(buttfer, pathToFile){
+    //     var md5 = crypto.createHash('md5');
+    //     md5.update(buttfer);
+    //     return md5.digest('hex');
+    //   }
+    // }
 
   });
   app.import('bower_components/layer/build/layer.js', {using: [{transformation: 'amd', as: "layer"}]});
