@@ -14,11 +14,6 @@ export default Ember.Route.extend({
     let _model = model;
     setTimeout(function () {
       Ember.$('#data_1 .form-control').attr("value", formatDate(_model.gamestime)).datetimepicker('update');
-      // Ember.$('#data_1 .form-control').datetimepicker({
-      //   format: 'Y-m-d',
-      //   step: 60,
-      //   autoclose: true
-      // });
       Ember.$('.selectpicker').selectpicker('val', _model.dttype);
     }, 100);
     function formatDate(tpm) {
