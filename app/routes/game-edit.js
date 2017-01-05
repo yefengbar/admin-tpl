@@ -21,30 +21,19 @@ export default Ember.Route.extend({
       // });
       Ember.$('.selectpicker').selectpicker('val', _model.dttype);
     }, 100);
-    function formatDate(now) {
-      now = new Date(parseInt(now) * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ');
-      var year = now.getYear();
+    function formatDate(tpm) {
+      var tpm = new Date(parseInt(tpm) * 1000).toLocaleString().replace(/上午|下午/, '');
+      var now = new Date(tpm);
+      var year = now.getFullYear();
       var month = now.getMonth() + 1;
       var date = now.getDate();
       var hour = now.getHours();
       var minute = now.getMinutes();
-      if (month < 10) {
-        month = "0" + month;
-      }
-      if (date < 10) {
-        date = "0" + date;
-      }
-      if (hour < 10) {
-        hour = "0" + hour;
-      }
-      if (minute < 10) {
-        minute = "0" + minute;
-      }
-      return year + "-" + month + "-" + date + "   " + hour + ":" + minute;
-    }
-
-    function getLocalTime(nS) {
-      return new Date(parseInt(nS) * 1000).toLocaleString().replace(/:\d{1,2}$/, ' ');
+      if (month < 10) {month = "0" + month;}
+      if (date < 10) {date = "0" + date;}
+      if (hour < 10) {hour = "0" + hour;}
+      if (minute < 10) {minute = "0" + minute;}
+      return year + "-" + month + "-" + date + " " + hour + ":" + minute;
     }
   }
 });
