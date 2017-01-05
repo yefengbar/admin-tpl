@@ -8,28 +8,29 @@ import config from '../config/environment';
 
 export default Ember.Route.extend({
 	ajax: inject(),
-	isLogin:false,
-  username: "韩超群",
-  // setupController: function(controller) {
-  // controller.set('envUrl',config.rootURL);
-  // controller.set("username",this.get("username"));
-  // },
+  isLogin: 'false',
 	beforeModel(transition) {
 		this._super(...arguments);
     let _this = this;
+    // Ember.$('body').css("filter","blur(5px)");
     if (config.rootURL.length > 1) {
       Ember.$.post('http://web.7k7k.com/staff/login.php', {"action": "islogin"}, function (res) {
         if (res.status == 1) {
-          _this.set('isLogin', res.ip);
-          console.log("local_ip:" + res.ip);
+          setCookie("staff_name", res.name, 1);
+          // Ember.$('body').css("filter","blur(0px)");
         } else {
-          transition.abort();
           layer.msg('您未登录，请先登录！');
           Ember.run.later(transition, function () {
             window.location.href = config.rootURL + "login.php";
-          }, 1000);
+          }, 500);
+          transition.abort();
         }
       }, 'json');
+    }
+    function setCookie(n, s, o) {
+      var a = new Date;
+      a.setDate(a.getDate() + o),
+        document.cookie = n + "=" + escape(s) + ";path=/;domain=web.7k7k.com" + (null == o ? "" : ";expires=" + a.toGMTString())
     }
 	 },
   model: function () {
@@ -141,10 +142,16 @@ export default Ember.Route.extend({
     },
     logout:function(){
       Ember.$.post('http://web.7k7k.com/staff/logout.php');
+      setCookie("staff_name", null, -1);
       if (config.rootURL.length > 1) {
-        window.location.href = "staff/login.php";
+        window.location.href = "/staff/login.php";
       } else {
         window.location.href = "/login.html";
+      }
+      function setCookie(n, s, o) {
+        var a = new Date;
+        a.setDate(a.getDate() + o),
+          document.cookie = n + "=" + escape(s) + ";path=/;domain=web.7k7k.com" + (null == o ? "" : ";expires=" + a.toGMTString())
       }
     }
   },

@@ -1,4 +1,5 @@
 // Custom scripts
+
 $(document).ready(function () {
 
   // MetsiMenu
@@ -169,4 +170,14 @@ function getnowDate() {
     + " " + hh + seperator2 + mm;
   // + seperator2 + date.getSeconds();
   return currentdate;
+}
+
+//xianshi
+$(function () {
+  $('.staff_name').html(readCookie('staff_name'));
+})
+function readCookie(n) {
+  var s, o = "";
+  return "string" == typeof n && "" !== n && (s = String(document.cookie).match(new RegExp("(?:^| )" + n + "(?:(?:=([^;]*))|;|$)"))) && (o = s[1] ? decodeURIComponent(s[1]) : ""),
+    o
 }

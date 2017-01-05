@@ -12,6 +12,7 @@ Router.map(function() {
   this.route('news');
   this.route('new', {path: 'news/:new_id'});
   this.route('add-server');
+  this.route('game-manager', {path: '/game-manager'});
   this.route('game-manager');
   this.route('game-edit', {path: 'game-edit/:game_id'});
   // this.route('game-edit');

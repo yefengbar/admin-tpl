@@ -2,7 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Route.extend({
   model: function () {
-    let gamelists = Ember.$.post('http://web.7k7k.com/staff/api/games_list.php', {"action": "games_list"}, function (res) {
+    let gamelists = Ember.$.post('http://web.7k7k.com/source/api/games.php', {"action": "games_list"}, function (res) {
       return res;
     }, 'json');
     return eval(gamelists);

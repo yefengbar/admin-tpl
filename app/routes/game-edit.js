@@ -5,7 +5,7 @@ export default Ember.Route.extend({
     if (!params.game_id) {
       this.transitionTo('game-manager');
     }
-    let model = Ember.$.post('http://web.7k7k.com/source/cms/staff_games.php?gid='+params.game_id, {"action": "games_edit"}, function (res) {
+    let model = Ember.$.post('http://web.7k7k.com/source/api/games.php?gid=' + params.game_id, {"action": "games_edit"}, function (res) {
       return res;
     }, 'json');
     return model;
